@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="../cart.js"></script>
+  </head>
+  <body>
+    <style>
+      .package-div {
+        border: 1px solid black;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 10px;
+      }
+    </style>
+
+    <div
+      style="
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+        justify-content: space-between;
+        padding: 0.5rem;
+      "
+    >
+      <div>
+        <a href="cart.html">Cart</a>
+
+        <a href="moviedes.html">Movie Description</a>
+
+        <a href="movies.html">Movies</a>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 5rem;
+        "
+      >
+        <a href="Login.html">Login</a>
+
+        <a href="Signup.html">Sign Up</a>
+      </div>
+    </div>
+
+    <header>
+      <h1>Your Cart</h1>
+      <p id="userEmailDisplay"></p>
+      <!-- Placeholder for displaying user's email -->
+    </header>
+
+    <div
+      style="margin: 2rem; padding: 0.5rem; border-radius: 10px"
+      id="cartItemsDisplay"
+    ></div>
+
+    <div id="cart">
+      <!-- Other cart elements go here -->
+      <button id="clearCartButton">Clear Cart</button>
+    </div>
+  </body>
+</html>

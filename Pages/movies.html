@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Available Movies</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <style>
+      .movie-div {
+        border: 1px solid black;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 10px;
+      }
+
+      button {
+        margin-top: 1rem;
+        margin: 1rem;
+      }
+    </style>
+
+    <div
+      style="
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+        justify-content: space-between;
+        padding: 0.5rem;
+      "
+    >
+      <div>
+        <a href="cart.html">Cart</a>
+
+        <a href="moviedes.html">Movie Description</a>
+
+        <a href="movies.html">Movies</a>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 5rem;
+        "
+      >
+        <a href="Login.html">Login</a>
+
+        <a href="Signup.html">Sign Up</a>
+      </div>
+    </div>
+
+    <h1>Available Movies</h1>
+    <div id="moviesList"></div>
+
+    <button id="backToHome">Back</button>
+
+    <!-- Load the script from an external JavaScript file -->
+    <script type="module" src="../displayMovies.js"></script>
+    <!-- Import the displayMovies function -->
+  </body>
+</html>

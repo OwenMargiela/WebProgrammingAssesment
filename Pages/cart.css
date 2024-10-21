@@ -1,0 +1,36 @@
+.seat {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    background-color: green;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: yellow;
+    color: black;
+}
+
+.available {
+    background-color: green;
+}
+
+.taken {
+    background-color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+#seatSelectionDiv {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 350px; /* Optional: Set a max width to control grid size */
+    gap: 10px; /* Space between seat elements */
+}
