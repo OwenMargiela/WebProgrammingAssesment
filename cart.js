@@ -113,6 +113,27 @@ function clearCart() {
   console.log("Cart has been cleared!");
 }
 
+function removeCartItemByTitle(movieTitle) {
+  const currentUserEmail = localStorage.getItem("currentUserEmail");
+  const cartKey = `cart_${currentUserEmail}`;
+
+  // Get the cart array from local storage
+  let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+  // Filter the cart array to remove the item with the matching movie title
+  cart = cart.filter((item) => item.movie.title !== movieTitle);
+
+  // Update the cart in local storage
+  localStorage.setItem(cartKey, JSON.stringify(cart));
+
+  // Reload the cart display
+  displayUserCart();
+
+  alert(
+    `Item with the movie title "${movieTitle}" will removed from the cart.`
+  );
+}
+
 document.getElementById("clearCartButton").addEventListener("click", clearCart);
 
 function generateInvoice(pkg) {
@@ -138,7 +159,7 @@ function generateInvoice(pkg) {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 
-  clearCart();
+  removeCartItemByTitle(pkg.movie.title);
 }
 
 function createSeatSelection(ticketCount, movieTitle, index) {
